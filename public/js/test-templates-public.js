@@ -28,5 +28,24 @@
 	 * Although scripts in the WordPress core, Plugins and Themes may be
 	 * practising this, we should strive to set a better example in our own work.
 	 */
+	 var vm = new Vue({
+		el:	 document.querySelector("#tt-main"),
+		mounted: function() {
+			console.log("Vue successfully mounted");
+		},
+		
+	});
+
 
 })( jQuery );
+
+// ( function() {
+// 	var vm = new Vue({
+// 		el:	 document.querySelector("#tt-main"),
+// 		mounted: function() {
+// 			console.log("Vue successfully mounted");
+// 		}
+// 	});
+// });
+
+// After page loads, mount Vue to #tt-main and console log

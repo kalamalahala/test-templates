@@ -73,6 +73,9 @@ class Test_Templates_Public {
 		 * class.
 		 */
 
+		// Bootstrap 4 CSS
+
+		wp_enqueue_style( $this->plugin_name . "_bootstrap", "https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css", array(), "4.6.1", "all" );
 		wp_enqueue_style( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'css/test-templates-public.css', array(), $this->version, 'all' );
 
 	}
@@ -95,6 +98,10 @@ class Test_Templates_Public {
 		 * between the defined hooks and the functions defined in this
 		 * class.
 		 */
+
+		wp_enqueue_script( $this->plugin_name . "_vuejs", "https://unpkg.com/vue@2.6.12", array( 'jquery' ), '2.6.12', false );
+		wp_enqueue_script( $this->plugin_name . "_vue_portal", "https://unpkg.com/portal-vue@2.1.0", array( 'jquery' ), '2.1.0', false );
+		wp_enqueue_script( $this->plugin_name . "_bootstrap_popper", "https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js", array( 'jquery' ), '4.6.1', false );
 
 		wp_enqueue_script( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'js/test-templates-public.js', array( 'jquery' ), $this->version, false );
 
