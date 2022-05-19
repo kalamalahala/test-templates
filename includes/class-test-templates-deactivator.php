@@ -31,6 +31,12 @@ class Test_Templates_Deactivator {
 	 */
 	public static function deactivate() {
 
+		// Remove all Options, Tables, and Settings
+		delete_option( 'test_templates_settings' );
+		global $wpdb;
+		$wpdb->query( "DROP TABLE IF EXISTS `wp_test_templates_test_table`" );
+		
+
 	}
 
 }

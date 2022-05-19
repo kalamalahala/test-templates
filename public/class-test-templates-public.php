@@ -100,4 +100,14 @@ class Test_Templates_Public {
 
 	}
 
+	// template_testing_callback - create Page Template
+	public function template_testing_callback() {
+
+		global $post;
+		if ( $post->post_name = 'template-testing' ) {
+			$output = TT_ROOT . 'templates/template-testing.php';
+		}
+		return $output;
+	}
+
 }
